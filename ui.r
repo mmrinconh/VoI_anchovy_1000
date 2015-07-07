@@ -18,6 +18,8 @@ shinyUI(fluidPage(
   # options
   sidebarLayout(
     sidebarPanel(
+      fluidRow(column(9, 
+        h5(strong("1000 simulations")))),
       # Simple integer interval
       sliderInput("rho", "rho:", 
                   min=0.1, max=10, value=0.4,  step= 0.1),#,
