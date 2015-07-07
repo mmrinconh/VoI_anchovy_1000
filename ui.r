@@ -64,10 +64,11 @@ shinyUI(fluidPage(
       column(4, wellPanel(
         h5("Parameters", em("rho"), "and", em("sd Disch"),"determines the survival of individuals affected by freshwater discharges from the Guadalquivir River."),
         h5("Parameter", em("lambda"),"determines the survival of individuals affected by the wind."),
-        h5(em("F"), "represents the fishing mortality.")
+        h5(em("F"), "represents the fishing mortality."),
+        h5("Coverage level represents a proportion of the average revenue that insurance covers. So if CL is 80% insurance will make up the difference if revenue falls below 80% of the long term average revenue in the fixed F scenario.")
       )),
-      column(3,tableOutput("values")),
-      column(3,wellPanel(h5(strong("HCR"), "is a harvest control rule that assumes the fishing mortality constant ignoring the effect of the environment in early survival while",strong("EHCR"),"is an environmentally-sensitive harvest control rule modifiying the fishing mortality according to wind frequency"))),
+      #column(3,tableOutput("values")),
+      column(3,wellPanel(h5(strong("HCR"), "is a harvest control rule that assumes the fishing mortality constant ignoring the effect of the environment in early survival while",strong("EHCR"),"is an environmentally-sensitive harvest control rule modifiying the fishing mortality according to the observed wind frequency"))),
       column(5,tableOutput("values2")),
      plotOutput("plot3")
     )#end fluidrow,
